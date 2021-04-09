@@ -6,7 +6,7 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 var dustbinObj,groundObject	
 var world;
-var paperobj;
+var paper;
 
 
 function setup() {
@@ -19,7 +19,7 @@ function setup() {
 	
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);
-	paperobj = new Paper(400,100);
+	paper = new Paper(400,100);
 
 	Engine.run(engine);
   
@@ -30,14 +30,14 @@ function draw() {
   rectMode(CENTER);
   background(230);
   
-  paperobj.display();
+  paper.display();
   groundObject.display();
   dustbinObj.display();
 
 }
 function keyPressed(){
    if(keyCode === UP_ARROW){
-	Matter.Body.applyForce(paperobj.body,paperobj.body.position,{x:130,y:-145})   
+	Matter.Body.applyForce(paper.body,paper.body.position,)   
    }
 
 }
